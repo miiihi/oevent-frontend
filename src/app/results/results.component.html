@@ -1,0 +1,11 @@
+<div *ngFor="let item of data;" class="is-clearfix o-item" [class.o-ital]="item.failed">
+    <div class="is-pulled-left o-position">
+      {{ item.pos }}&nbsp;
+    </div>
+    <div class="is-pulled-left">
+      {{ item.FIRSTNAME }} {{ item.LASTNAME }} {{ item.CLUB_SHORTNAME}}
+    </div>
+    <div class="is-pulled-right">
+      {{ item.time }}
+    </div>
+  </div>

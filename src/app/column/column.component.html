@@ -1,0 +1,23 @@
+<div [gdf-scroll]="scrollOptions" #scrollDir="gdf-scroll" class="o-scroll" [class.in-scroll]="inScroll">
+  <div *ngFor="let cat of col.cats;trackBy: getCatId" class="o-cat">
+    <div class="o-cat-title">
+      {{ cat.name }}
+    </div>
+    <div *ngFor="let item of cat.items;trackBy: getItemId; index as i;" class="is-clearfix o-item" [class.o-ital]="item.failed">
+      <div class="is-pulled-left o-position">
+        {{ item.pos }}&nbsp;
+      </div>
+      <div class="is-pulled-left">
+        {{ item.FIRSTNAME }} {{ item.LASTNAME }} {{ item.CLUB_SHORTNAME}}
+      </div>
+      <div class="is-pulled-right">
+        {{ item.time }}
+      </div>
+    </div>
+    <div *ngIf="showEmpty && cat.items.length === 0" class="is-clearfix o-item">
+      <div class="is-pulled-left">
+          Še ni rezultatov
+      </div>
+    </div>
+  </div>
+</div>

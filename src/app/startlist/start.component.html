@@ -1,0 +1,19 @@
+<div class="is-fullheight">
+  <div class="o-header columns">
+    <div class="column is-narrow ">
+        <img class="o-logo" src="/assets/oksg.png">
+    </div>
+    <div class="column o-header-text">SSOL2 Slovenj Gradec
+    </div>
+    <div class="column is-narrow">
+      <img class="o-logo is-pulled-right" src="/assets/sgmtbo2018.png">
+    </div>
+  </div>
+  <div class="o-content">
+    <div class="columns is-multiline">
+      <div *ngFor="let col of data.dataCols;index as colIdx;" class="column is-3" >
+        <column [col]="col" (stopCat)="stopCat($event, colIdx)" (startCat)="startCat($event, colIdx)" ></column>
+      </div>
+    </div>
+  </div>
+</div>

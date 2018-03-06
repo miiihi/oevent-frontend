@@ -1,0 +1,107 @@
+@import '../node_modules/bulma/bulma'
+
+$xsmall: 330px
+$small: 576px
+$medium: 768px
+$large: 992px
+$xlarge: 1180px
+// ------- Modifiers --------
+=small
+  @media screen and (min-width: $small)
+    @content
+
+=medium
+  @media screen and (min-width: $medium)
+    @content
+
+=large
+  @media screen and (min-width: $large)
+    @content
+
+=xlarge
+  @media screen and (min-width: $xlarge)
+    @content
+
+=mobile-only
+  @media screen and (max-width: $medium - 1)
+    @content
+
+$header: 120px
+
+.is-fullheight
+  height: 100vh
+
+.o-header
+  height: $header
+  line-height: 0
+
+.o-logo
+  height: 100px
+  margin-top: 10px
+  margin-left: 20px
+
+.o-header-text
+  font-size: 62px
+  margin: 60px 60px 0 0
+  font-family: 'Arial Narrow', Arial, sans-serif
+  font-weight: 600
+  text-align: center
+
+.o-content
+  margin: 0 20px
+  height: calc(100vh - 120px)
+
+.o-column
+  height: 100%
+  overflow: hidden
+
+.o-cat-title
+  width: 100%
+  background-color: #F04E23
+  color: white
+
+.o-cat-btn
+  width: 100%
+  background-color: #F04E23
+  color: white
+  display: block
+  text-align: center
+  margin: 20px auto 0
+  font-size: 20px
+  font-weight: bold
+  padding: 10px 0 10px
+  +medium
+    width: 400px
+  &:last-of-type
+    margin-bottom: 100px
+
+.o-item
+  font-weight: bold
+
+.o-item, .o-cat-title
+  padding: 0 5px
+
+.o-cat
+  padding-bottom: 15px
+
+.in-scroll > .o-cat
+  &:last-child
+    height: calc(100vh - 135px - 52px)
+
+.o-scroll
+  overflow: hidden
+  height: calc(100vh - 135px - 52px)
+
+.o-position
+  width: 20px
+  text-align: right
+
+.o-ital
+  font-style: italic
+  font-weight: normal
+
+.col-title
+  font-size: 28px
+  line-height: 28px
+  font-family: 'Arial Narrow', Arial, sans-serif
+  font-weight: 600
